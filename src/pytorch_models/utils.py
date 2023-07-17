@@ -1,3 +1,4 @@
+import torch
 import torch.nn as nn
 
 def modelSplitter(original_model, split_idx):
@@ -23,3 +24,11 @@ def configHeadTail(head, tail):
 	for child in tail().children():
 		print(child_counter, ":", child)
 		child_counter += 1
+
+numpy2tensor = torch.from_numpy
+
+def tensor2numpy(tensor):
+	return tensor.detach().numpy()
+
+def tensorShape(tensor):
+	return tensor.size()

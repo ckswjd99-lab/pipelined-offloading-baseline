@@ -8,7 +8,7 @@ VGG16_SPLIT_IDX = 2
 VGG16_INTER_SIZE = 100490
 VGG16_RESULT_SIZE = 4129
 
-weights = VGG16_Weights.DEFAULT
+weights = VGG16_Weights.IMAGENET1K_V1
 original_model = models.vgg16(weights=weights)
 head, tail = modelSplitter(original_model, VGG16_SPLIT_IDX)
 
